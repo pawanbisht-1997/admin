@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>admin pannel</title>
+    <!-- font owesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- style css  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="container">
+          <div class="flex spce-between align-center">
+            <div class="left"></div>
+            <div class="right">
+              <div class="profile-img flex spce-between align-center">
+                <img src="img/admin-img.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="left-menu">
+        <ul>
+          <li>Admin</li>
+          <li checkId="dashboard" onclick="updateDashBoard(0)">
+            <i class="fa fa-tachometer" aria-hidden="true"></i>
+            <a href="javascript:void(0)">Dashboard</a>
+          </li>
+          <li checkId="leads" onclick="updateDashBoard(1)">
+            <i class="fa fa-tasks" aria-hidden="true"></i>
+            <a href="javascript:void(0)">Leads</a>
+          </li>
+          <li checkId="leads2" onclick="updateDashBoard(2)">
+            <i class="fa fa-tachometer" aria-hidden="true"></i>
+            <a href="#">3</a>
+          </li>
+          <li checkId="dashboard" onclick="updateDashBoard(3)">
+            <i class="fa fa-tachometer" aria-hidden="true"></i>
+            <a href="#">4</a>
+          </li>
+          <li checkId="dashboard" onclick="updateDashBoard(4)">
+            <i class="fa fa-tachometer" aria-hidden="true"></i>
+            <a href="#">4</a>
+          </li>
+        </ul>
+      </div>
+      <div id="dashboard" class="tab_page flex  dashboard">
+       <div class="flex align-center w-100">
+        <div class="box">
+          <div class="left">
+            <img src="img/profile-user.png" alt="" />
+          </div>
+          <div class="right">
+            <h4>Total Number</h4>
+            <h3>3180</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="left">
+            <img src="img/profile-user.png" alt="" />
+          </div>
+          <div class="right">
+            <h4>Total Number</h4>
+            <h3>3180</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="left">
+            <img src="img/profile-user.png" alt="" />
+          </div>
+          <div class="right">
+            <h4>Total Number</h4>
+            <h3>3180</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="left">
+            <img src="img/profile-user.png" alt="" />
+          </div>
+          <div class="right">
+            <h4>Total Number</h4>
+            <h3>3180</h3>
+          </div>
+        </div>
+       </div>
+      </div>
+      <div id="leads" class="tab_page  dashboard active ">
+        <div class="w-100" id="lead-parent">
+          <div class="dashboard-header">
+            <h4>All Students List</h4>
+            <button class="glbl-btn" onclick="addLead()">add new</button>
+          </div>
+          <div class="lead-head leads-box flex spce-between">
+            <div class="box">
+              <h5>Name</h5>
+            
+            </div>
+            <div class="box">
+              <h5>Number</h5>
+            
+            </div>
+            <div class="box">
+              <h5>Email</h5>
+            
+            </div>
+          
+            <div class="box">
+              <h5>Phone Number</h5>
+            
+            </div>
+            <div class="box">
+              <h5>Priorty</h5>
+            
+            </div>
+            <div class="box">
+              <h5>Status</h5>
+            
+            </div>
+            <div class="box">
+              <h5>Date</h5>
+            
+            </div>
+            <div class="box">
+              <h5>Action</h5>
+            
+            </div>
+
+
+           
+          </div>
+     
+       
+      
+        </div>
+      </div>
+      <div id="addLead" class="tab_page dashboard ">
+         <div class="left">
+          <form id="leadForm">
+             <div class="flex flex-wrap spce-between">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" >
+              </div>
+              <div class="form-group">
+                <label for="emai">Email</label>
+                <input type="email" id="email" >
+              </div>
+              <div class="form-group">
+                <label for="number">Phone Number</label>
+                <input type="number" id="number" >
+              </div>
+              <div class="form-group">
+                <label for="number">Priorty</label>
+                 <select name="" id="Priority" >
+                  <option value="High">High</option>
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                 </select>
+              </div>
+              <div class="form-group">
+                <label for="number">Status</label>
+                 <select name="" id="status" >
+                  <option value="Pending">Pending</option>
+                  <option value="Working">Working</option>
+                  <option value="Completed">Completed</option>
+                 </select>
+              </div>
+              <div class="form-group">
+                <label for="number">Date</label>
+                 <input type="date" name="" id="date" >
+              </div>
+              <div class="form-group">
+                <label for="number">Address</label>
+                 <input type="text" name="" id="Address" >
+              </div>
+              
+             </div>
+
+             <input type="submit" value="submit" id="submit">
+         </form>
+         </div>
+         <div class="right">
+          
+         </div>
+      </div>
+   
+    </main>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
